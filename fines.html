@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Fines | Minrva Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap-cyborg.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="bootstrap/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="bootstrap/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="bootstrap/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="bootstrap/ico/favicon.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="#">Minrva - Citation/Login - Documentation</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><a href="example.html">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Nav</li>
+              <li class="nav-header"><a href="#">Documentation Home</a></li>
+              <li><a href="#citation">Citation</a></li>
+              <li class="active"><a href="#checkedout">Checked Out</a></li>
+              <li><a href="#fines">Fines</a></li>
+              <li><a href="#blocks">Blocks</a></li>
+              <li><a href="#favorites">Favorites</a></li>
+              <li><a href="#requested">Requested</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <h1>Fines</h1>
+          <hr />
+          <!-- <h2>User Story</h2>
+          As a library user, I want to see what items I have checked out. -->
+          <h2>Description</h2>
+          <p>Displays a list of all fines associated with this account.  Information includes:</p>
+          <ul>
+            <li>Title - The item for/to which the fine was assigned.</li>
+            <li>Date - The date that this fine was levied.</li>
+            <li>Amount - The amount of the fine (USD).</li>
+            <li>Type - The reason for the fine.  Reasons can include:</li>
+            <ul><li>Overdue - The item was not returned or renewed by the due date.</li></ul>
+			<ul><li>Lost Item Processing - The administrative costs of replacing a lost item???????????</li></ul>
+			<ul><li>Forgive - The listed fine was cancelled.</li></ul>
+			<ul><li>Lost Item Replacement - The item was reported as lost, and must be replaced.</li></ul>
+          </ul>
+          <h2>Usage</h2>
+          <ul>
+            <li>To view fines:</li>
+            <ul>
+              <li>Fines will appear on the screen, sorted by date.  Scroll up or down to view the entire list of fines.</li>
+			  <li>A "Total" is displayed at the top of the screen.  This represents the sum total of all fines for this account.</li>
+            </ul>
+            <li>To return to the previous menu:</li>
+            <ul>
+              <li>Click the “Home” icon or use the back arrow.</li>
+            </ul>
+          </ul>
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+        <p>&copy; The Undergraduate Library at the University of Illinois at Urbana-Champaign, 2013</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap-transition.js"></script>
+    <script src="bootstrap/js/bootstrap-alert.js"></script>
+    <script src="bootstrap/js/bootstrap-modal.js"></script>
+    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="bootstrap/js/bootstrap-tab.js"></script>
+    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="bootstrap/js/bootstrap-popover.js"></script>
+    <script src="bootstrap/js/bootstrap-button.js"></script>
+    <script src="bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
