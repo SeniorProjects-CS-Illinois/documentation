@@ -2,31 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Checked Out | Minrva Documentation</title>
+    <title>Requested | Minrva Documentation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="bootstrap/css/bootstrap-cyborg.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-
-      @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-          float: none;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
-    </style>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="overrides.css" rel="stylesheet">
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -55,7 +38,7 @@
           <a class="brand" href="#">Minrva - Citation/Login - Documentation</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li><a href="example.html">Home</a></li>
+              <li><a href="home.html">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -70,40 +53,32 @@
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Nav</li>
-              <li class="nav-header"><a href="#">Documentation Home</a></li>
+              <li class="nav-header"><a href="home.html">Documentation Home</a></li>
               <li><a href="#citation">Citation</a></li>
-              <li class="active"><a href="#checkedout">Checked Out</a></li>
+              <li><a href="checkedout.html">Checked Out</a></li>
               <li><a href="#fines">Fines</a></li>
-              <li><a href="#blocks">Blocks</a></li>
-              <li><a href="#favorites">Favorites</a></li>
-              <li><a href="#requested">Requested</a></li>
+              <li><a href="#fines">Blocks</a></li>
+              <li><a href="favorites.html">Favorites</a></li>
+              <li class="active"><a href="requested.html">Requested</a></li>
             </ul>
           </div>
         </div>
         <div class="span9">
-          <h1>Checked Out</h1>
+          <h1>Requested</h1>
           <hr />
           <!-- <h2>User Story</h2>
           As a library user, I want to see what items I have checked out. -->
           <h2>Description</h2>
-          <p>Displays a list of checked-out items.  Information includes:</p>
+          <p>Displays a list of items that were marked as favorite by the user.  Information includes:</p>
           <ul>
-            <li>Title - The title of the borrowed item.</li>
-            <li>Institution - The institution from which the item was borrowed.</li>
-            <li>Due Date - The date by which the item must be returned or renewed.</li>
-            <li>Status - The current status of the item (“Checked-out” or “Renewed”).</li>
-            <ul><li>Users can renew any of their currently checked-out items.</li></ul>
+            <li>Specific information related to the item. For example for a book the details would include the Author's Name.</li>
           </ul>
           <h2>Usage</h2>
           <ul>
-            <li>To renew items:</li>
-            <ul>
-              <li>Check the box next to each item you want to renew, and then touch the renew items button that appears at the bottom of the screen</li>
-            </ul>
-            <li>To return to the previous menu:</li>
-            <ul>
-              <li>Click the “Home” icon or use the back arrow.</li>
-            </ul>
+            
+
+            <!-- Need to put stuff here. -->
+
           </ul>
         </div>
       </div>
@@ -120,18 +95,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="bootstrap/js/jquery.js"></script>
-    <script src="bootstrap/js/bootstrap-transition.js"></script>
-    <script src="bootstrap/js/bootstrap-alert.js"></script>
-    <script src="bootstrap/js/bootstrap-modal.js"></script>
-    <script src="bootstrap/js/bootstrap-dropdown.js"></script>
-    <script src="bootstrap/js/bootstrap-scrollspy.js"></script>
-    <script src="bootstrap/js/bootstrap-tab.js"></script>
-    <script src="bootstrap/js/bootstrap-tooltip.js"></script>
-    <script src="bootstrap/js/bootstrap-popover.js"></script>
-    <script src="bootstrap/js/bootstrap-button.js"></script>
-    <script src="bootstrap/js/bootstrap-collapse.js"></script>
-    <script src="bootstrap/js/bootstrap-carousel.js"></script>
-    <script src="bootstrap/js/bootstrap-typeahead.js"></script>
 
   </body>
 </html>
