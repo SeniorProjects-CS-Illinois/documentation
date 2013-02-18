@@ -8,24 +8,9 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="bootstrap/css/bootstrap-cyborg.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-
-      @media (max-width: 980px) {
-        /* Enable use of floated navbar text */
-        .navbar-text.pull-right {
-          float: none;
-          padding-left: 5px;
-          padding-right: 5px;
-        }
-      }
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <!-- <link href="overrides.css" rel="stylesheet"> -->
+    <style id="styles">
     </style>
     <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -55,7 +40,7 @@
           <a class="brand" href="#">Minrva - Citation/Login - Documentation</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="home.html">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
@@ -66,13 +51,13 @@
 
     <div class="container-fluid">
       <div class="row-fluid">
-        <div class="span3">
+        <div class="span3 hidden-phone">
           <div class="well sidebar-nav">
             <ul class="nav nav-list">
               <li class="nav-header">Nav</li>
               <li class="active nav-header"><a href="#">Documentation Home</a></li>
               <li><a href="#citation">Citation</a></li>
-              <li><a href="#checkedout">Checked Out</a></li>
+              <li><a href="checkedout.html">Checked Out</a></li>
               <li><a href="#fines">Fines</a></li>
               <li><a href="#fines">Blocks</a></li>
               <li><a href="#fines">Favorites</a></li>
@@ -82,7 +67,7 @@
         </div>
         <div class="span9">
           <div class="hero-unit">
-            <h1>Minrva - Citation/Login - Documentation</h1>
+            <h1 class="hidden-phone">Minrva - Citation/Login - Documentation</h1>
             <p>Documentation for the Minrva Citation and Login modules.</p>
             <!-- <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p> -->
           </div>
@@ -95,7 +80,7 @@
             <div class="span4">
               <h2>Checked Out</h2>
               <p>Displays a list of checked-out items.  </p>
-              <p><a class="btn" href="example-sub.html">View details &raquo;</a></p>
+              <p><a class="btn" href="checkedout.html">View details &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Fines</h2>
