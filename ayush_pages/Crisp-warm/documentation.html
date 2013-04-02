@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" dir="ltr"><!--<![endif]-->
 
 <head>
-<title>Variable Width Lemmon Slider | Crisp Responsive Retina Ready Portfolio Business</title>
+<title>Documentation | Minrva</title>
 
 <!-- Meta Data ================ -->
 <meta charset="UTF-8" />
@@ -17,9 +17,6 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 <link rel="stylesheet" href="assets/css/header-1.css" type="text/css"/>
-
-<!-- lemmon slider variable width slider for images -->
-<link rel="stylesheet" href="assets/css/lemmon-slider.css" type="text/css" media="screen" />
 
 <!-- Icons ================ -->
 <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
@@ -51,7 +48,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 <script src="assets/js/modernizr.custom.87724.js"></script><!-- js multiple backgrounds svg background size -->
 
 </head>
-<body class="index">
+<body class="about">
 
 <!-- begin accesibility skip to nav skip content -->
 <ul class="visuallyhidden" id="top">
@@ -87,7 +84,6 @@ with yours and get your fb:admis content information where the XXXX goes.
 	</ul>
 </section>
 
-<!-- begin .header-->
 <header class="header  clearfix"> <img src="drawable-hdpi/ic_launcher_owl.png" class="print logo" alt="name of company" />
 	<div class="container"> 
 
@@ -97,7 +93,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 		<nav id="main_menu">
 			<h1>Minrva Project</h1>
 			<ul class="accordmobile">
-				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="index.html">Home</a></li>
 				<li class="parent"><a href="javascript:void(0)">About the App<i></i></a>
 					<ul>
 						<li><a href="tall-logo.html">General Info</a></li>
@@ -105,9 +101,9 @@ with yours and get your fb:admis content information where the XXXX goes.
 						
 					</ul>
 				</li>
-				<li><a href="people.html">People</a></li>
+				<li class="parent"><a href="people.html">People<i></i></a>
 				</li>
-				<li class="parent"><a href="javascript:void(0)">Technical Documentation<i></i></a>
+				<li class="active"><a href="documentation.html">Technical Documentation<i></i></a>
 					
 				</li>
 				<li class="parent"><a href="javascript:void(0)">New!<i></i></a>
@@ -129,36 +125,141 @@ with yours and get your fb:admis content information where the XXXX goes.
 
 <!-- begin #page - the container for everything but header -->
 <div id="page">
-	<div class="hero-unit center no-border no-padding-bottom">
-		<div class="container"> 
-			<!--note the home class on the h1 tag-->
-			<h1>Library Technology Prototyping Initiative</h1>
+	<div class="hero-unit">
+		<div class="container">
+			<h2>Documentation</h2>
 		</div>
 		<!--close container--> 
 	</div>
-	<!--close hero-unit--> 
+	<!--close hero-unit-->
 	
-	<!--begin slider -->
-	<div class="lemmon-wrap clearfix">
-		<div id="lemmon-slider" class="lemmon-slider">
-			<ul>
-				
-				<li> <a href="portfolio-single.html"> <img src="../demo/lemmon-slider/Edouard_Manet_010.png" alt="" /></a>
-					<div class="summary"> <a href="portfolio-single.html">
-						<h3>Manet</h3>
-						<p>Categories</p>
-						</a> </div>
-				</li>
-				
-			</ul>
-		</div>
-		<div class="controls"> <a href="#" class="prev-page">Prev Page</a> <a href="#" class="next-page">Next Page</a> </div>
-		<!-- / .controls --> 
-	</div>
-	<!-- / end slider --> 
-	
+	<div class="container clearfix" id="main-content"> 
+		
+		<!--begin main content-->
+		<h2>How to create an Android Application</h2>
+		<h4>Version 0.1</h4>
+		<h4>Copyright</h4>
+		<h4>03.31.13</h4>
 
-	<!--close .container role="main-content" --> 
+		<table class="table table-bordered table-striped table-hover">
+			<thead>
+				<tr>
+					<th>Revision History</th>
+					<th>-- TO DO --</th>
+					<th>-- Merge top cells --</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td> Revision 0.1 </td>
+					<td>03.31.13</td>
+					<td>(Senior Project Group Names)</td>
+					<td>created</td>
+				</tr>
+			</tbody>
+		</table>
+		<h2> Creating a basic Android application </h2>
+		<p>This tutorial covers writing a basic Android application that will access a Minrva web service.</p>
+		<p>In this tutorial, Eclipse (4.2) and Android (2.3) is used.</p>
+		<h3 class="short_headline"><span>Table of Contents</span></h3>
+				<ol>
+					<li> Installation
+						<ol>
+							<li>Installing Eclipse</li>
+							<li>Installing the ADT through Eclipse</li>
+						</ol>
+					</li>
+					<li> Setting up an Android Project
+					</li>
+					<li> Create a sample module
+					</li>
+					<li> How to create an Android Application
+						<ol>
+							<li>Creating a basic Android application</li>
+						</ol>
+					</li>
+					<li> Setting up the Minrva Project and GreenDroid
+						<ol>
+							<li>Clone the Minrva project</li>
+							<li>Import the Minrva Project into Eclipse</li>
+							<li>Import GreenDroid</li>
+							<li>Link GreenDroid and Minrva</li>
+							<li>Start the application</li>
+							<ol>
+								<li>Running on an emulator</li>
+								<li>Running on a connected device</li>
+							</ol>
+							<li>Start using Minrva!</li>
+						</ol>
+					</li>
+					<li>General module example (this is how the app generally works!)</li>
+					<ol>
+							<li>Logging in & Fines.onSuccessfulLogin()</li>
+							<li>The DownloadFines Class</li>
+							<li>The bindData() method</li>
+					</ol>
+					<li>Creating a new module for Minrva</li>
+					<ol>
+							<li>Final Code</li>
+							<ol>
+								<li>HelloWorld.java</li>
+								<li>hello_world.xml</li>
+								<li>Final product:</li>
+							</ol>
+					</ol>
+				</ol>
+		<h3 class="short_headline"><span>Installation</span></h3>
+		<h6>Installing Eclipse:</h6>
+		<p>Version 4.2.2 of Eclipse IDE is available here: </p>
+		<p><a href="http://www.eclipse.org/downloads/packages/eclipse-classic-422/junosr2" target="_blank">http://www.eclipse.org/downloads/packages/eclipse-classic-422/junosr2</a></p>
+		<p>Follow instruction on this page to download and install Eclipse.</p>
+		<h6>Installing the ADT (Android Development Tools) through Eclipse:</h6>
+		<p>Follow the instructions given here to install the ADT plugin through Eclispe: </p>
+		<p><a href="http://developer.android.com/sdk/installing/installing-adt.html" target="_blank">http://developer.android.com/sdk/installing/installing-adt.html</a></p>
+		<p>Installing the tools will add the Android Virtual Device Manager and Android SDK Manager options in Eclipse.</p>
+		<h6>Setting up android project</h6>
+		<p>Details and step-by-step instructions for setting up a new android project can be found here: 
+		   <a href="http://developer.android.com/training/basics/firstapp/creating-project.html" target="_blank">http://developer.android.com/training/basics/firstapp/creating-project.html</a>
+		</p>
+
+		<p>Note that additional, advanced instructions are available from the same webpage, by following the appropriate links.  Information is available on the android manifest, view items (text boxes, buttons, etc.), activity listeners, and more.</p> 
+
+		<h3 class="short_headline"><span>Setting up the Minrva Project and GreenDroid</span></h3>
+		
+		<div class="slide-to-top first-pane-open fancy">
+						<ul class="accordion-st-wrapper">
+							<li class="st-content-wrapper"><a href="#" class="trigger">1. Clone the Minrva project <i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>The first step is to clone the Minrva project repository.  In our example, it is done using Mercurial and TortoiseHG.  The repository can be found at the URL shown below. Clone the project to whichever local directory you choose.  When cloning, you will be prompted for the username and password.  Enter it to continue with the download
+									</p>
+									<img src="clone_m copy.jpg" class="aligncenter" alt="">
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+							<li class="st-content-wrapper"><a href="#" class="trigger">2.  Import the Minrva Project into Eclipse <i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>The next step is to import the project into eclipse, to begin editing.  As mentioned, we are using Eclipse version 4.2.  Start eclipse.  Once eclipse is up and running, we are going to import the project.  Select File->Import.  In the new window, select “Existing Android code into Workspace”.  
+									</p>
+									<img src="import_m copy.jpg" class="aligncenter" alt="">
+									<p>
+										In the new window, click “Browse” to locate the project directory. We have to navigate to the correct directory of the Minrva project.  As shown below, it is located at “[Cloned directory]\MinrvaApp\Android\Minrva”.  The Minrva folder is the root directory of the project, and that is the folder that must be selected for the import.  You can select any other options necessary on this screen, such as “Copy project into workspace”, which is convenient if the cloned directory is not within the eclipse workspace.  Once you have the settings set the way you would like, click finish to import the project.  Note that the project may be imported as “edu.illinois.ugl.minrva.core.SpringBoard”.  To change this, right-click on the project folder, and select Refactor->Rename.  Enter the new name, make sure “Update References” is checked, and click “Ok”.  Now the project will have a new name.
+									</p>
+									<img src="browse_m copy.jpg" class="aligncenter" alt="">
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+						</ul>
+						<!--close ul for slide-to-top slideaccordion--> 
+		</div>
+
+
+
+		
+		
+	</div>
+	<!--close .container id="main-content" --> 
+	
 	<!--begin footer -->
 	<footer id="footer" class="clearfix">
 		<div class="container"><!--footer container-->
@@ -242,8 +343,21 @@ with yours and get your fb:admis content information where the XXXX goes.
 <script src="assets/js/responsive-tables.js"></script><!--responsive table--> 
 <script src="assets/js/jquery.fitvid.js"></script><!-- responsive videos --> 
 
-<script src="assets/js/lemmon-slider-min.js"></script><!-- lemmon slider js --> 
-
+<script>
+$(window).load(function() {
+  $('.clientlogos').flexslider({
+    animation: 'slide',
+	slideshow: false,
+    animationLoop: false,
+    itemWidth: 183,
+    itemMargin: 1,
+    minItems: 1,
+    maxItems: 6,
+	controlNav: false,
+	useCSS: false //thins type if true
+  });
+});
+</script> 
 <!--initialize scripts / custom scripts all pages--> 
 <script src="assets/js/scripts.js"></script>
 </body>
