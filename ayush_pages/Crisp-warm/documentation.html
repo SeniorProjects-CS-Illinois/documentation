@@ -249,13 +249,168 @@ with yours and get your fb:admis content information where the XXXX goes.
 								</div>
 								<!--close .st-content 1 --> 
 							</li>
+							<li class="st-content-wrapper"><a href="#" class="trigger">3.  Import GreenDroid<i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>The Minrva app makes use of an outside library, known as GreenDroid, to create many of the UI elements.  To use this functionality, the GreenDroid project must also be imported, following the same steps as above.  Select File->Import as before, and select “Existing Android code into Workspace”.  In the new window, click “Browse”, and navigate to the same directory as before, but select the “GreenDroid” folder, instead of “Minrva”.  Click “Finish” when done. 
+									</p>
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+							<li class="st-content-wrapper"><a href="#" class="trigger">4.  Link GreenDroid and Minrva <i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>Now that both project are imported, it is necessary to link the two. This is a fairly simple process.  Right-click on the Minrva project, and select properties.  In the new window, select “Android” from the left-hand menu.  In the “Library” section, click “Remove” to remove the GreenDroid reference.  Then, click “Add” to re-add the GreenDroid library (If the imports worked as described, the GreenDroid library should be immediately visible.  If not, try importing the projects again).   
+									</p>
+									<img src="link.png" class="aligncenter" alt="">
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+							<li class="st-content-wrapper"><a href="#" class="trigger">5.  Start the application <i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>Now that everything is imported and linked, we can start the application on an android device.  To run the application, simply right-click on the project in eclipse, and select Run As->Android Application.  
+   									</p>
+   									<h6>5a.  Running on an emulator</h6>
+   									<p>An emulator should be established when the android SDK was installed.  By default, if no device is plugged in, the application will run on the emulator.  If not, please follow the instructions on that website for setting up the emulator.  After the emulator is installed, clicking Run As->Android Application will launch the emulator (if it is not already open), install and run the app (on the emulator).  After the emulator and application are launched, they can be interacted with as usual.
+									</p>
+									<h6>5b.  Running on a connected device</h6>
+   									<p>If an android device is plugged in, eclipse should automatically run the application on that device.  The application should start automatically.  If a previous version of the application has already been installed on the device, you may be prompted to remove the old version before continuing.  Instructions for removing applications will differ by device.  Please consult the manufacturer’s instructions for your particular device.  Once the application is removed, follow step 4 to start the application again.  
+									</p>
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+							<li class="st-content-wrapper"><a href="#" class="trigger">6.  Start using Minrva!<i class="icon-chevron-up"></i></a>
+								<div class="st-content">
+									<p>
+										That’s all it takes to get Minrva up and running for development!  You can now start creating your own module, following the steps below.  We will go through a basic tutorial on creating your own simple module that showcases some of the features available to you.
+									</p>
+									<p>	
+										Note that some modules will require a special username/password login to access.  Consult your sysadmin for more information.  Also note that most modules will require a persistent internet connection to function correctly, and the app may crash if one is not established.  WiFi is recommended, but mobile data will work as well.  Internet pass-through is untested, and may produce unwanted results.  
+ 									</p>
+								</div>
+								<!--close .st-content 1 --> 
+							</li>
+
 						</ul>
 						<!--close ul for slide-to-top slideaccordion--> 
 		</div>
 
+		<h3 class="short_headline"><span>General module example (this is how the app generally works!)</span></h3>
+			<ul>
+				<li>
+					<p>This is a basic overview of how the Fines module works.  It is meant to give an introduction to the basics of how the Minrva application works at a more basic level, and to facilitate development of a new module.  We will also look at another, more in depth example briefly later or, to elaborate on the background web services.  Additionally, we will also provide a step by step module creation example, detailing the entire process. 
+					</p>
+				</li>
+				<li>
+					<p>The first portion to discuss is the code to create the activity: onCreate.  This is called when the activity starts, and is responsible for establishing the basics.  	
+					</p>
+				</li>
+			</ul>
+			<img src="oncreate.jpg" class="" alt="">
+			<p> </p>
+			<ul>
+				<li>
+					<p>The first two lines will be the default code added by the new project.  They read the provided layout file (“fines_main.xml”), and translate that to what is seen on the screen.  
+					</p>
+				</li>
+				<li>
+					<p>The next line after that will get a reference to the current activity.  This particular reference is used later on to show a progress bar.  In general, whenever any kind of dialog box, progress bar, etc. is shown on top of an application, it (the box) requires a reference to the current activity (window) that it is displayed on.  	
+					</p>
+				</li>
+				<li>
+					<p>Next up is code to setup the dropdown menu used by the module.  Unless changes need to be made, this can be left alone. 
+					</p>
+				</li>
+				<li>
+					<p>The next two sets of lines are responsible for getting references to the screen elements.  This module uses two elements:
+					</p>
+					<ul>
+						<li>
+							<p>
+								A TextView for displaying a message to the user (in this case, the total dollar amount of the fines)
+							</p>
+						</li>
+						<li>
+							<p>
+								A ListView for displaying the list of fines.  When using a ListView, it is necessary to set an adapter that handles how the input data is displayed on the list.  In this case, the MinrvaAdapter handles this, and can just be setup as shown, unless a custom adapter is required.
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<p>The final step is to invoke the login screen.  Again, this is handled exactly as shown above.  The parameters are a LoginHandler, Activity, and two webservice uris, which describe the type of webservice that should be called (on a successful login).
+					</p>
+				</li>
+			</ul>
+		<h3>Logging in & Fines.onSuccessfulLogin()</h3>
+			<img src="logging.jpg" class="" alt="">
+			<p>
+				After login() is called in onCreate(), onSuccessfulLogin() is called when the user enters in a valid username and password into the dialog box displayed by login(). That username and password combination is then sent to a subclass of AsyncTask: DownloadFines, which actually downloads and displays the user’s fines.
+			</p>
+			<h3>The DownloadFines Class</h3>
+			<img src="downloadFines.jpg" class="" alt="">
+			<img src="onpostexecute.jpg" class="" alt="">
+			<p>
+			</br>
+				Even though the class is started by creating an instance of it and calling execute(), the actual functionality is split into several functions.
+			</p>
+			<p>
+				In this example, there are three functions that are executed in this order when execute() is called:
+			</p>
+			<ol>
+				<li>onPreExecute()</li>
+				<li>doInBackground()</li>
+				<li>onPostExecute()</li>
+			</ol>
+			<p>
+				These three functions are already included in the base AsyncTask class; any AsyncTask will generally follow this execution structure.
+			</p>
+			<p>
+				In the Fines class, the functionality has been overriden to do these things:
+			</p>
+			<ul>
+				<li> <strong>onPreExecute()</strong> - this method clears the current view and shows a “Loading...” dialog while the next two methods run</li>
+				<li><strong>doInBackground()</strong> - this method asynchronously sends the credentials given in the execute() method for the class to the server using a specific fines data URL, and receives a JSON object from the server</li>
+				<li><strong>onPostExecute() </strong>- this method processes the received data and updates the UI of the Fines activity to display the received data</li>
+			</ul>
+		<h3> The bindData() method </h3>
+			<img src="binddata.jpg" class="" alt="">
+			<p>
+			</br>
+				This method examines the JSON object returned by the server and puts the data it found into a ListView that will display the fines information. At the end of the method, the total amount of the fines returned by the server is calculated and put into a TextView that is then displayed at the top of the Fines page.
+			</p>
+		<h3 class="short_headline"><span>Creating a new module for Minrva</span></h3>
+		<p> Start creating a new module by creating a new package (File->New->Package or right-click on the project->New->Package) in the Source Code Tree.  In this example we’ll name it “edu.illinois.ugl.minrva.hello_world”; then create a class file for the module named “HelloWorld.java”, leaving every field except for “Name” as the default. 
+		</p>
+		<img src="newjavapackage.jpg" class="" alt="">
+		</br>
+		<img src="newjavaclass.jpg" class="" alt="">
+		<p>
+			The file should contain only a little bit of code; it should look like this: </br>
 
+			INSERT CODE </br>
 
+			The Minrva application uses the GreenDroid application for a lot of functionality, so instead of using the Activity superclass, Minrva modules will subclass “GDActivity”. So the first change to make would be changing the class definition to this:</br>
+
+			INSERT CODE </br>
+
+			We’ll start creating our new Hello World app by basing our code from the Cite module since it contains the basic structure of a Minrva module that doesn’t need authentication functionality. In particular, we’ll start with these two pieces: </br>
+
+			<ul>
+				<li>onCreate()</li>
+				<li>an AsyncTask class with:</li>
+					<ul>
+						<li>onPreExecute()</li>
+						<li>doInBackground()</li>
+						<li>onPostExecute()</li>
+					</ul>
+			</ul>
+
+			Start by adding the onCreate() method in HelloWorld.java by copying the following code inside the HelloWorld class: </br>
+
+			INSERT CODE
 		
+
+		</p>
+
 		
 	</div>
 	<!--close .container id="main-content" --> 
