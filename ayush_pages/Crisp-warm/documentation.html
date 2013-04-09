@@ -386,11 +386,15 @@ with yours and get your fb:admis content information where the XXXX goes.
 		<p>
 			The file should contain only a little bit of code; it should look like this: </br>
 
-			INSERT CODE </br>
+			<img src="file1.jpg" class="" alt=""> 
+
+		    </br>
 
 			The Minrva application uses the GreenDroid application for a lot of functionality, so instead of using the Activity superclass, Minrva modules will subclass “GDActivity”. So the first change to make would be changing the class definition to this:</br>
 
-			INSERT CODE </br>
+			<img src="file2.jpg" class="" alt=""> 
+
+			</br>
 
 			We’ll start creating our new Hello World app by basing our code from the Cite module since it contains the basic structure of a Minrva module that doesn’t need authentication functionality. In particular, we’ll start with these two pieces: </br>
 
@@ -406,10 +410,60 @@ with yours and get your fb:admis content information where the XXXX goes.
 
 			Start by adding the onCreate() method in HelloWorld.java by copying the following code inside the HelloWorld class: </br>
 
-			INSERT CODE
+			<img src="activity.jpg" class="" alt="">
+			<img src="onpreexecute.jpg" class="" alt="">
+			<img src="progressDialog.jpg" class="" alt="">
+
+			<p> Finally, add this method to the HelloWorld class; this is the method that starts the download of the citation once the button is touched: </p>
+
+			<img src="done.jpg" class="" alt="">
+
+			</br>
+
+			<p>(TODO: Expand and step-ify) </br>
+				Integrating HelloWorld with the rest of the app </br>
+				<ul>
+					<li> Open Springboard.java in package edu.illinois.ugl.minrva.core; add a statement to import the HelloWorld class (import edu.illinois.ugl.minrva.hello_world.HelloWorld)</li>
+						<ul>
+							<li>Add this line to the onCreate() method in SpringBoard.java:</li>
+							<ul>
+								<li> mFams.add(new Family("Hello World!", R.drawable.ic_launcher_owl, HelloWorld.class)); </li>
+							</ul>
+							<li>
+								place it next to the other mFam.add() statements in onCreate()
+							</li>
+						</ul>
+					<li> Add your new HelloWorld class to AndroidManifest.xml, in the res folder </li>
+					<ul>
+						<li>Add this line to your AndroidManifest.xml file, next to the other activity elements</li>
+						<li><activity android:name=".hello_world.HelloWorld" android:configChanges="orientation|keyboardHidden"/></li>
+					</ul>
+					<li>
+						Create a file called hello_world.xml in the layout folder, and copy the contents of the hello_world.xml code listed below into it
+					</li>
+				</ul>
+			</p>
+			<h3 class="short_headline"><span>Final Code</span></h3>
+			<h4> HelloWorld.java </h4>
+			<img src="final_code1.jpg" class="" alt="">
+			<img src="final_code2.jpg" class="" alt="">
+			<img src="final_code3.jpg" class="" alt="">
+			<img src="final_code4.jpg" class="" alt="">
+			<img src="final_code5.jpg" class="" alt="">
+			</br>
+			<h4> Final Module Screenshot </h4>
+			<img src="final_module.jpg" class="" alt="">
+
+
+
+
 		
 
-		</p>
+
+			
+		
+
+		
 
 		
 	</div>
