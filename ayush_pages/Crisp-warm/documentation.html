@@ -17,6 +17,8 @@
 <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css"/>
 <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 <link rel="stylesheet" href="assets/css/header-1.css" type="text/css"/>
+<link rel="stylesheet" href="../demo/demo.css" type="text/css" media="all">
+<link rel="stylesheet" href="../demo/theme-google.css" type="text/css" media="all">
 
 <!-- Icons ================ -->
 <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
@@ -44,8 +46,18 @@ with yours and get your fb:admis content information where the XXXX goes.
 
 <!-- JS JQuery in the head you can use ajax if you want ================ -->
 <script src="assets/js/jquery.min.js"></script>
+
 <!-- Add to Head after Style sheet http://modernizr.com/docs/#installing  ================ -->
 <script src="assets/js/modernizr.custom.87724.js"></script><!-- js multiple backgrounds svg background size -->
+
+
+
+<!-- Include jQuery Syntax Highlighter -->
+<script type="text/javascript" src="../demo/jquery.syntaxhighlighter.min.js"></script>
+
+<!-- Initialise jQuery Syntax Highlighter -->
+<script type="text/javascript">$.SyntaxHighlighter.init();</script>
+
 
 </head>
 <body class="about">
@@ -137,9 +149,9 @@ with yours and get your fb:admis content information where the XXXX goes.
 		
 		<!--begin main content-->
 		<h2>How to create an Android Application</h2>
-		<h4>Version 0.1</h4>
-		<h4>Copyright</h4>
-		<h4>03.31.13</h4>
+		<h5>Version 0.1</h5>
+		<h5>Copyright</h5>
+		<h5>03.31.13</h5>
 
 		<table class="table table-bordered table-striped table-hover">
 			<thead>
@@ -164,22 +176,20 @@ with yours and get your fb:admis content information where the XXXX goes.
 		<p>In this tutorial, Eclipse (4.2) and Android (2.3) is used.</p>
 		<h3 class="short_headline"><span>Table of Contents</span></h3>
 				<ol>
-					<li> Installation
+					<li> <a href="#installation">Installation</a>
 						<ol>
 							<li>Installing Eclipse</li>
 							<li>Installing the ADT through Eclipse</li>
 						</ol>
 					</li>
-					<li> Setting up an Android Project
-					</li>
-					<li> Create a sample module
-					</li>
-					<li> How to create an Android Application
+					<li> <a href="#settingAndroid">Setting up an Android Project</a>
 						<ol>
-							<li>Creating a basic Android application</li>
+							<li>Create a sample module</li>
+							<li>How to create an Android Application</li>
 						</ol>
 					</li>
-					<li> Setting up the Minrva Project and GreenDroid
+
+					<li> <a href="#settingMinrva">Setting up the Minrva Project and GreenDroid </a>
 						<ol>
 							<li>Clone the Minrva project</li>
 							<li>Import the Minrva Project into Eclipse</li>
@@ -193,23 +203,23 @@ with yours and get your fb:admis content information where the XXXX goes.
 							<li>Start using Minrva!</li>
 						</ol>
 					</li>
-					<li>General module example (this is how the app generally works!)</li>
+					<li><a href="#generalModule">General module example (this is how the app generally works!) </a></li>
 					<ol>
 							<li>Logging in & Fines.onSuccessfulLogin()</li>
 							<li>The DownloadFines Class</li>
 							<li>The bindData() method</li>
 					</ol>
-					<li>Creating a new module for Minrva</li>
+					<li><a href="#createNew">Creating a new module for Minrva </a></li>
 					<ol>
-							<li>Final Code</li>
+							<li><a href="#finalCode">Final Code</a></li>
 							<ol>
 								<li>HelloWorld.java</li>
 								<li>hello_world.xml</li>
-								<li>Final product:</li>
+								<li>Final Module Screenshot</li>
 							</ol>
 					</ol>
 				</ol>
-		<h3 class="short_headline"><span>Installation</span></h3>
+		<h3 class="short_headline" ><span><a name="installation">Installation</a></span></h3>
 		<h6>Installing Eclipse:</h6>
 		<p>Version 4.2.2 of Eclipse IDE is available here: </p>
 		<p><a href="http://www.eclipse.org/downloads/packages/eclipse-classic-422/junosr2" target="_blank">http://www.eclipse.org/downloads/packages/eclipse-classic-422/junosr2</a></p>
@@ -218,14 +228,15 @@ with yours and get your fb:admis content information where the XXXX goes.
 		<p>Follow the instructions given here to install the ADT plugin through Eclispe: </p>
 		<p><a href="http://developer.android.com/sdk/installing/installing-adt.html" target="_blank">http://developer.android.com/sdk/installing/installing-adt.html</a></p>
 		<p>Installing the tools will add the Android Virtual Device Manager and Android SDK Manager options in Eclipse.</p>
-		<h6>Setting up android project</h6>
+		
+		<h3 class="short_headline" ><span><a name="settingAndroid">Setting up android project</a></span></h3>
 		<p>Details and step-by-step instructions for setting up a new android project can be found here: 
 		   <a href="http://developer.android.com/training/basics/firstapp/creating-project.html" target="_blank">http://developer.android.com/training/basics/firstapp/creating-project.html</a>
 		</p>
 
 		<p>Note that additional, advanced instructions are available from the same webpage, by following the appropriate links.  Information is available on the android manifest, view items (text boxes, buttons, etc.), activity listeners, and more.</p> 
 
-		<h3 class="short_headline"><span>Setting up the Minrva Project and GreenDroid</span></h3>
+		<h3 class="short_headline"><span><a name="settingMinrva">Setting up the Minrva Project and GreenDroid</a></span></h3>
 		
 		<div class="slide-to-top first-pane-open fancy">
 						<ul class="accordion-st-wrapper">
@@ -293,7 +304,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 						<!--close ul for slide-to-top slideaccordion--> 
 		</div>
 
-		<h3 class="short_headline"><span>General module example (this is how the app generally works!)</span></h3>
+		<h3 class="short_headline"><span><a name="generalModule">General module example (this is how the app generally works!)</a></span></h3>
 			<ul>
 				<li>
 					<p>This is a basic overview of how the Fines module works.  It is meant to give an introduction to the basics of how the Minrva application works at a more basic level, and to facilitate development of a new module.  We will also look at another, more in depth example briefly later or, to elaborate on the background web services.  Additionally, we will also provide a step by step module creation example, detailing the entire process. 
@@ -341,7 +352,17 @@ with yours and get your fb:admis content information where the XXXX goes.
 				</li>
 			</ul>
 		<h3>Logging in & Fines.onSuccessfulLogin()</h3>
-			<img src="logging.jpg" class="" alt="">
+			<pre class="code language-html">
+			
+				/**
+				 * Handler for login that has authenticated credentials.
+				 */
+				 
+				 public void onSuccessfullLogin(String username, String password)
+				 {
+				  	new DownloadFines().execute(username, password);
+				 }
+			</pre>
 			<p>
 				After login() is called in onCreate(), onSuccessfulLogin() is called when the user enters in a valid username and password into the dialog box displayed by login(). That username and password combination is then sent to a subclass of AsyncTask: DownloadFines, which actually downloads and displays the user’s fines.
 			</p>
@@ -351,8 +372,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 			<p>
 			</br>
 				Even though the class is started by creating an instance of it and calling execute(), the actual functionality is split into several functions.
-			</p>
-			<p>
+			    </br>
 				In this example, there are three functions that are executed in this order when execute() is called:
 			</p>
 			<ol>
@@ -362,8 +382,7 @@ with yours and get your fb:admis content information where the XXXX goes.
 			</ol>
 			<p>
 				These three functions are already included in the base AsyncTask class; any AsyncTask will generally follow this execution structure.
-			</p>
-			<p>
+			    </br>
 				In the Fines class, the functionality has been overriden to do these things:
 			</p>
 			<ul>
@@ -377,26 +396,41 @@ with yours and get your fb:admis content information where the XXXX goes.
 			</br>
 				This method examines the JSON object returned by the server and puts the data it found into a ListView that will display the fines information. At the end of the method, the total amount of the fines returned by the server is calculated and put into a TextView that is then displayed at the top of the Fines page.
 			</p>
-		<h3 class="short_headline"><span>Creating a new module for Minrva</span></h3>
+		<h3 class="short_headline"><span><a name="createNew">Creating a new module for Minrva</a></span></h3>
 		<p> Start creating a new module by creating a new package (File->New->Package or right-click on the project->New->Package) in the Source Code Tree.  In this example we’ll name it “edu.illinois.ugl.minrva.hello_world”; then create a class file for the module named “HelloWorld.java”, leaving every field except for “Name” as the default. 
 		</p>
 		<img src="newjavapackage.jpg" class="" alt="">
 		</br>
 		<img src="newjavaclass.jpg" class="" alt="">
+		</br>
 		<p>
 			The file should contain only a little bit of code; it should look like this: </br>
 
-			<img src="file1.jpg" class="" alt=""> 
+			<pre class="code language-html">
 
-		    </br>
+				package edu.illinois.ugl.minrva.hello_world;
+				public class HelloWorld {
+
+				}	 
+			</pre>
+
+		    
 
 			The Minrva application uses the GreenDroid application for a lot of functionality, so instead of using the Activity superclass, Minrva modules will subclass “GDActivity”. So the first change to make would be changing the class definition to this:</br>
 
-			<img src="file2.jpg" class="" alt=""> 
+			<pre class="code language-html">
 
-			</br>
+				package edu.illinois.ugl.minrva.hello_world;
 
-			We’ll start creating our new Hello World app by basing our code from the Cite module since it contains the basic structure of a Minrva module that doesn’t need authentication functionality. In particular, we’ll start with these two pieces: </br>
+				import greendroid.app.GDActivity;
+
+				public class HelloWorld extends GDActivity {
+
+				}
+			</pre>
+
+
+			<p>We’ll start creating our new Hello World app by basing our code from the Cite module since it contains the basic structure of a Minrva module that doesn’t need authentication functionality. In particular, we’ll start with these two pieces: </p>
 
 			<ul>
 				<li>onCreate()</li>
@@ -409,16 +443,88 @@ with yours and get your fb:admis content information where the XXXX goes.
 			</ul>
 
 			Start by adding the onCreate() method in HelloWorld.java by copying the following code inside the HelloWorld class: </br>
+			
+			<pre class="code language-html">
+				private Activity activity;;
+				// Passing it along
+				int imageId;
+				String lbl;
 
-			<img src="activity.jpg" class="" alt="">
-			<img src="onpreexecute.jpg" class="" alt="">
-			<img src="progressDialog.jpg" class="" alt="">
+				private TextView hello_world_citation;
+					
+				@Override
+				public void onCreate(Bundle savedInstanceState) 
+				{
+					// Load
+					super.onCreate(savedInstanceState);
+				 
+					// Title bar
+					setActionBarContentView(R.layout.hello_world);
+
+					// Citation Text View
+					hello_world_citation = (TextView)findViewById(R.id.hello_world_citation);
+					   
+					// Get stuff...
+					activity = this;
+					lbl = getIntent().getStringExtra(GD_ACTION_BAR_TITLE);
+					imageId = getIntent().getIntExtra(GD_ACTION_BAR_ICON, R.drawable.stub);
+				}	
+			</pre><!--close pre-->
+
+				(TODO: Finish instructions) </br>
+
+				Then copy this code for the DownloadHelloWorldCitation class into the HelloWorld class; it contains the code that handles the citation download: </br>
+
+			<pre class="code language-html">
+				private class DownloadHelloWorldCitation extends AsyncTask &lt; Void, Void, Citation[] &gt; 
+				    {    	
+						ProgressDialog progressDialog;
+						
+				        @Override
+				        protected void onPreExecute()
+				        {
+				    		// Show a loading dialog
+				            progressDialog = ProgressDialog.show(activity, "", "Loading...");       
+				        }
+				        
+						protected Citation[] doInBackground(Void... params) 
+				    	{ 			
+							// Download data
+					        String cite_uri = getString(R.string.cite_apa);
+					        cite_uri +=  "/uiu_6957086";
+					        Citation[] citations = HTTP.downloadObjects(cite_uri, Citation[].class);
+					        return citations;        
+				        }
+						
+						protected void onPostExecute(Citation[] citations) 
+					    {
+				            progressDialog.dismiss();   
+
+				            String errMsg = "Sorry, no APA citation is available.";
+							if(citations == null || citations.length == 0 || citations[0].getCitation().length() == 0)
+							{
+								Toast.makeText(activity, errMsg, Toast.LENGTH_LONG).show();
+							}
+							else
+							{
+								hello_world_citation.setText(Html.fromHtml(citations[0].getCitation()));
+							}
+					    }
+				    }
+			
+			</pre><!--close pre-->
 
 			<p> Finally, add this method to the HelloWorld class; this is the method that starts the download of the citation once the button is touched: </p>
 
-			<img src="done.jpg" class="" alt="">
 
-			</br>
+			<pre class="code language-html">
+			
+				public void done(View v)
+				{
+					new DownloadHelloWorldCitation().execute();
+				}
+			</pre>
+
 
 			<p>(TODO: Expand and step-ify) </br>
 				Integrating HelloWorld with the rest of the app </br>
@@ -436,34 +542,171 @@ with yours and get your fb:admis content information where the XXXX goes.
 					<li> Add your new HelloWorld class to AndroidManifest.xml, in the res folder </li>
 					<ul>
 						<li>Add this line to your AndroidManifest.xml file, next to the other activity elements</li>
-						<li><activity android:name=".hello_world.HelloWorld" android:configChanges="orientation|keyboardHidden"/></li>
+						<li>&lt;activity android:name=".hello_world.HelloWorld" android:configChanges="orientation|keyboardHidden"/&gt;</li>
 					</ul>
 					<li>
 						Create a file called hello_world.xml in the layout folder, and copy the contents of the hello_world.xml code listed below into it
 					</li>
 				</ul>
 			</p>
-			<h3 class="short_headline"><span>Final Code</span></h3>
+			<h3 class="short_headline"><span><a name="finalCode">Final Code</a></span></h3>
 			<h4> HelloWorld.java </h4>
-			<img src="final_code1.jpg" class="" alt="">
-			<img src="final_code2.jpg" class="" alt="">
-			<img src="final_code3.jpg" class="" alt="">
-			<img src="final_code4.jpg" class="" alt="">
-			<img src="final_code5.jpg" class="" alt="">
+
+			<pre class="code language-html">
+				package edu.illinois.ugl.minrva.hello_world;
+
+				import android.app.Activity;
+				import android.app.ProgressDialog;
+				import android.content.Intent;
+				import android.os.AsyncTask;
+				import android.os.Bundle;
+				import android.text.Html;
+				import android.view.View;
+				import android.widget.TextView;
+				import android.widget.Toast;
+				import edu.illinois.ugl.minrva.R;
+				import edu.illinois.ugl.minrva.cite.Display;
+				import edu.illinois.ugl.minrva.cite.models.Citation;
+				import edu.illinois.ugl.minrva.core.SpringBoard;
+				import edu.illinois.ugl.minrva.core.connections.HTTP;
+				import greendroid.app.GDActivity;
+				import android.widget.RadioGroup;
+
+				public class HelloWorld extends GDActivity {
+				private Activity activity;; // keep these two semicolons
+				    
+					// Passing it along
+					int imageId;
+					String lbl;
+					
+					private TextView hello_world_citation;
+					
+				    @Override
+				    public void onCreate(Bundle savedInstanceState) 
+				    {
+					   // Load
+					   super.onCreate(savedInstanceState);
+				 
+					   // Title bar
+					   setActionBarContentView(R.layout.hello_world);
+					   
+					   // Citation Text View
+					   hello_world_citation = (TextView)findViewById(R.id.hello_world_citation);
+					   
+					   // Get stuff...
+					   activity = this;
+					   lbl = getIntent().getStringExtra(GD_ACTION_BAR_TITLE);
+					   imageId = getIntent().getIntExtra(GD_ACTION_BAR_ICON, R.drawable.stub);
+				    }
+				    
+				    /**
+				     * Done button. 
+				     * @param v
+				     */
+					public void done(View v)
+				    {
+						new DownloadHelloWorldCitation().execute();
+				    }
+					
+					/**
+					 * AsyncTask used to download data from MinrvaServices api.
+					 */
+					private class DownloadHelloWorldCitation extends AsyncTask &lt; Void, Void, Citation[] &gt;
+				    {    	
+						ProgressDialog progressDialog;
+						
+				        @Override
+				        protected void onPreExecute()
+				        {
+				    		// Show a loading dialog
+				            progressDialog = ProgressDialog.show(activity, "", "Loading...");       
+				        }
+				        
+						protected Citation[] doInBackground(Void... params) 
+				    	{ 			
+							// Download data
+					        String cite_uri = getString(R.string.cite_apa);
+					        cite_uri +=  "/uiu_6957086";
+					        Citation[] citations = HTTP.downloadObjects(cite_uri, Citation[].class);
+					        return citations;        
+				        }
+						
+						protected void onPostExecute(Citation[] citations) 
+					    {
+				            progressDialog.dismiss();   
+
+				            String errMsg = "Sorry, no APA citation is available.";
+							if(citations == null || citations.length == 0 || citations[0].getCitation().length() == 0)
+							{
+								Toast.makeText(activity, errMsg, Toast.LENGTH_LONG).show();
+							}
+							else
+							{
+								hello_world_citation.setText(Html.fromHtml(citations[0].getCitation()));
+							}
+					    }
+				    }
+				}
+
+				</pre>
+
+				<h4> hello_world.xml </h4>
+
+				<pre class="code language-html">
+
+				&lt; ?xml version="1.0" encoding="utf-8"? &gt;
+				
+				&lt;ScrollView 
+				xmlns:android="http://schemas.android.com/apk/res/android"
+				android:layout_height = "wrap_content"
+				android:layout_width = "fill_parent" 
+				&gt;
+
+					&lt;LinearLayout
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical" 
+					&gt;
+					
+						&lt;View
+						android:id="@+id/div"
+						android:layout_height="2dp"
+						android:layout_width="fill_parent"
+						android:background="@color/goldenrod_8" 
+						/&gt;
+						
+						&lt;Button
+						android:id="@+id/btnDone"
+						android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+				        	android:text="Hello World! (citation)"
+				        	android:onClick="done"
+						android:layout_marginTop="10dp" 
+				       	android:layout_marginLeft="10dp"
+				  	 	android:layout_marginRight="10dp"
+				    	/&gt;
+						
+						&lt;TextView
+				 		android:id="@+id/hello_world_citation"
+				 		android:textColor="@color/black"
+				 		android:textSize="@dimen/medium_font" 
+				 		android:background="@drawable/citation_shape"
+				 		android:layout_width="fill_parent"
+						android:layout_height="wrap_content"
+						android:padding="5dp"
+						android:layout_marginTop="10dp"
+						android:layout_marginLeft="10dp"
+				  	 	android:layout_marginRight="10dp"
+						/&gt;
+					&lt;/LinearLayout&gt;
+				&lt;/ScrollView&gt;
+
+			</pre>
+
+
 			</br>
 			<h4> Final Module Screenshot </h4>
 			<img src="final_module.jpg" class="" alt="">
-
-
-
-
-		
-
-
-			
-		
-
-		
 
 		
 	</div>
@@ -567,6 +810,12 @@ $(window).load(function() {
   });
 });
 </script> 
+<!-- scripts on this page ================ --> 
+<script src="assets/js/fancybox/source/jquery.fancybox.pack.js"></script><!--main fancybox--> 
+<script src="assets/js/fancybox/source/helpers/jquery.fancybox-media.js"></script><!--fancybox media--> 
+<script src="assets/js/fancybox/source/helpers/jquery.fancybox-buttons.js"></script><!--fancybox buttons--> 
+<script src="assets/js/fancybox/source/helpers/jquery.fancybox-thumbs.js"></script><!--fancybox thumbs--> 
+<script src="assets/js/fancybox_init.js"></script><!--fancybox load--> 
 <!--initialize scripts / custom scripts all pages--> 
 <script src="assets/js/scripts.js"></script>
 </body>

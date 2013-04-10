@@ -10,8 +10,8 @@ body.tall-logo nav.user {margin-left:180px;}
 /* header / logo (desktop)
 ================================================== */
 #logo, #logo img { /* width and height of logo desktop NON retina - this is the regular size logo */
-	width:96px;
-	height:96px;
+    width:96px;
+    height:96px;
 }
 #logo {
     padding: 0 0 10px 0;
@@ -25,13 +25,13 @@ body.tall-logo nav.user {margin-left:180px;}
 
 
 #logo em { 
-	position:absolute;
-	display:block;
-	top:-1000px;
-	left:100px;
-	width:1px;
-	height:1px;
-	overflow:hidden;
+    position:absolute;
+    display:block;
+    top:-1000px;
+    left:100px;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
 .header {
     margin: 0 auto 3% auto;
@@ -45,8 +45,8 @@ body.tall-logo nav.user {margin-left:180px;}
 /* tall logo resets (desktop)
 ================================================== */
 .tall-logo #logo, .tall-logo #logo img { /* - this is the tall size logo NON retina */
-	width:170px;
-	height:185px;
+    width:170px;
+    height:185px;
 }
 .tall-logo #logo {
     margin-top:0;
@@ -58,7 +58,7 @@ body.tall-logo nav.user {margin-left:180px;}
     background-repeat: no-repeat;
 }
 .tall-logo .header{
-	height:95px; /*height of navigation */
+    height:95px; /*height of navigation */
 }
 
 .lt-ie8 .tall-logo .header {margin-bottom:100px!important;}
@@ -71,17 +71,17 @@ body.tall-logo nav.user {margin-left:180px;}
     position: relative
 }
 .container.preheader {
-	right:-10px;
-	position:relative
+    right:-10px;
+    position:relative
 }
 .container.preheader form {
-	margin:0;
-	padding:0;
-	height:30px
+    margin:0;
+    padding:0;
+    height:30px
 }
 .search-wrapper {
-	float:right;
-	padding:5px 0 0 0
+    float:right;
+    padding:5px 0 0 0
 }
 .search #search-trigger{
     font-size:0.75em;
@@ -96,63 +96,63 @@ body.tall-logo nav.user {margin-left:180px;}
     height:30px;
     position:relative;
     top:3px;
-	background:url(../images/search.png) 0px 50% no-repeat;
-	cursor:pointer
+    background:url(../images/search.png) 0px 50% no-repeat;
+    cursor:pointer
 }
 .search #search-trigger.active{
-	background:url(../images/search.png) -30px 50% no-repeat;
+    background:url(../images/search.png) -30px 50% no-repeat;
 }
 .search input {
-	background-color:#fcf8e5;
-	width:200px;
-	margin-left:5px;
-	top:3px;
-	position:relative;
-	font-size:16px;
-	-webkit-appearance: textfield; 
+    background-color:#fcf8e5;
+    width:200px;
+    margin-left:5px;
+    top:3px;
+    position:relative;
+    font-size:16px;
+    -webkit-appearance: textfield; 
 }
 .js .search input {
-	display:none;
+    display:none;
 }
 .preheader .phone {
-	float:right;
-	line-height:45px;
-	margin-right:10px;
-	padding:0 15px 0 10px;
-	border-right:1px solid #dfcea1
+    float:right;
+    line-height:45px;
+    margin-right:10px;
+    padding:0 15px 0 10px;
+    border-right:1px solid #dfcea1
 }
 .preheader .phone a, .preheader .phone  {color:#c28861;}
 .preheader .social  {
-	float:right;
-	line-height:30px;
-	height:45px;
-	border-right:1px solid #dfcea1;
-	margin-right:0;
-	position:relative;
-	padding-right:20px;
+    float:right;
+    line-height:30px;
+    height:45px;
+    border-right:1px solid #dfcea1;
+    margin-right:0;
+    position:relative;
+    padding-right:20px;
 }
 .lt-ie9 .preheader .social  {
-	margin-right:0;
-	padding-right:20px;
+    margin-right:0;
+    padding-right:20px;
 }
 .preheader .social a {
-	color:#c28861;
-	position:relative;
-	top:10px;
-	position:relative;
-	text-decoration: none;
+    color:#c28861;
+    position:relative;
+    top:10px;
+    position:relative;
+    text-decoration: none;
 }
 .preheader .social a:before {
-	font-size:22px;
-	line-height:25px;
-	padding:0 5px 0 5px;
+    font-size:22px;
+    line-height:25px;
+    padding:0 5px 0 5px;
 }
 .preheader .social .tooltip .tooltip-inner {
-	background:#dfcea1;
-	color:#5c3317;
+    background:#dfcea1;
+    color:#5c3317;
 }
 .preheader .social .tooltip.bottom .tooltip-arrow {
-	border-bottom-color:#dfcea1
+    border-bottom-color:#dfcea1
 }
 
 /* main navigation / desktop styles
@@ -168,18 +168,18 @@ body.tall-logo nav.user {margin-left:180px;}
     top: 0;
 }
 #main_menu li.parent i {
-	background:url(../images/menu_arrow.png) 0 0 no-repeat;
-	display:inline-block;
-	width:5px;
-	margin-left:8px;
-	height:5px;
-	position:relative;
-	top:-2px;
+    background:url(../images/menu_arrow.png) 0 0 no-repeat;
+    display:inline-block;
+    width:5px;
+    margin-left:8px;
+    height:5px;
+    position:relative;
+    top:-2px;
 }
 .lt-ie8 #main_menu .parent i { position:relative;display:inline;zoom:1;left:5px;top:-4px}
 
 #main_menu ul ul li.parent i { /* third level */
-	background-position:-5px 0;
+    background-position:-5px 0;
 }
 #main_menu ul {
     float: right;
@@ -270,7 +270,7 @@ body.tall-logo nav.user {margin-left:180px;}
     padding: 0;
     position: absolute;
     top: 95px;
-	z-index: 100;
+    z-index: 100;
 }
 /* second level */
 #main_menu li ul ul {
@@ -299,7 +299,7 @@ body.tall-logo nav.user {margin-left:180px;}
 
 /*=================== ie7 fix */
 .lt-ie8 #main_menu ul ul ul {
-	display:none;
+    display:none;
 }
 
 /* js off */
@@ -311,20 +311,20 @@ body.tall-logo nav.user {margin-left:180px;}
     display: block;
 }
 .no-js.lt-ie8 #main_menu ul ul li:hover ul {
-	display:block;
+    display:block;
 }
 
 
 /*
 ***********************************************************************************
-/*	BEGIN MEDIA QUERIES
+/*  BEGIN MEDIA QUERIES
 ***********************************************************************************
  */
 
 
 /*==================================================== 
 ******************************************************
-/*	DEVICES less than 880 pixels wide
+/*  DEVICES less than 880 pixels wide
 ******************************************************
 ====================================================== */
 @media only screen and (max-width: 880px) {
@@ -342,25 +342,25 @@ body.tall-logo nav.user {margin-left:180px;}
 
 /*==================================================== 
 ******************************************************
-/*	DEVICES less than 800 pixels wide
+/*  DEVICES less than 800 pixels wide
 ******************************************************
 ====================================================== */
 @media only screen and (max-width: 800px) {
 
 /*** Menu Adjustment so items don't cover the logo ***/
 #main_menu li {
-	margin: 0;
+    margin: 0;
 }
 #main_menu li a {
 padding: 0 7px;
 font-size: 115%;
 }
-	
+
 } /**** end max width 800px ****/
 
 /*==================================================== 
 ******************************************************
-/*	DEVICES less than 600 pixels wide
+/*  DEVICES less than 600 pixels wide
 ******************************************************
 ====================================================== */
 @media only screen and (max-width: 600px) {
@@ -376,7 +376,7 @@ a.tele {
 
 /*==================================================== 
 ******************************************************
-/*	DEVICES less than 767 pixels wide 
+/*  DEVICES less than 767 pixels wide 
 ******************************************************
 ====================================================== */
 @media only screen and (max-width: 767px) {
@@ -458,8 +458,8 @@ body.tall-logo nav.user {margin-left:0;}
     top: auto;
 }
 .search-wrapper {
-	/***!!removed float right */
-	padding: 10px 0 0 0;
+    /***!!removed float right */
+    padding: 10px 0 0 0;
     margin: 0;
     position: absolute; /***!! changed position type*/
     left:50px; /***!! added left position*/
@@ -577,8 +577,8 @@ body.tall-logo nav.user {margin-left:0;}
 #main_menu ul ul ul li:last-child {border:0px;}
 
 #main_menu ul ul ul li {
-	border-left:0px solid #fff;
-	border-right:0px solid #fff;
+    border-left:0px solid #fff;
+    border-right:0px solid #fff;
 }
 
 
@@ -587,28 +587,28 @@ body.tall-logo nav.user {margin-left:0;}
 
 
 /* ================================================== 
-	MAIN RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
-	http://weedygarden.net/2012/04/hi-res-retina-display-css-sprites/
-	http://www.kylejlarson.com/blog/2012/creating-retina-images-for-your-website/
-	http://www.webresourcesdepot.com/3-solutions-for-serving-high-res-images-to-retina-display-devices/
+    MAIN RETINA BACKGROUND IMAGE REPLACEMENT & RETINA INFORMATION
+    http://weedygarden.net/2012/04/hi-res-retina-display-css-sprites/
+    http://www.kylejlarson.com/blog/2012/creating-retina-images-for-your-website/
+    http://www.webresourcesdepot.com/3-solutions-for-serving-high-res-images-to-retina-display-devices/
 ================================================== */
 
-/*	change the webkit number to 1 to test on webkit to make sure 
-	the sizes and the images show up correctly then switch back before launch */
+/*  change the webkit number to 1 to test on webkit to make sure 
+    the sizes and the images show up correctly then switch back before launch */
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2),
- 	only screen and (-o-min-device-pixel-ratio: 3/2),
- 	only screen and (min--moz-device-pixel-ratio: 2),
-	only screen and (min-device-pixel-ratio: 2) 
+    only screen and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (min-device-pixel-ratio: 2) 
 {
 
 
 #logo {
-		background-image:url(../images/retina/logo_@2x.png);
-	    	-moz-background-size:140px 59px; /*w & h of total ORIGINAL 72dpi image*/
+        background-image:url(../images/retina/logo_@2x.png);
+            -moz-background-size:140px 59px; /*w & h of total ORIGINAL 72dpi image*/
              -ie-background-size:140px 59px;
               -o-background-size:140px 59px;
-       	 -webkit-background-size:140px 59px;
+         -webkit-background-size:140px 59px;
                  background-size:140px 59px;
 }
 
@@ -618,27 +618,27 @@ body.tall-logo nav.user {margin-left:0;}
             -moz-background-size:170px 185px; /*w & h of total image 72dpi image*/
              -ie-background-size:170px 185px;
               -o-background-size:170px 185px;
-       	 -webkit-background-size:170px 185px;
-                 background-size:170px 185px;	
+         -webkit-background-size:170px 185px;
+                 background-size:170px 185px;   
 
 }
 
 
 .search #search-trigger {
-		background-image:url(../images/retina/search_@2x.png);
-	    	-moz-background-size:60px 30px; /*w & h of total ORIGINAL 72dpi image*/
+        background-image:url(../images/retina/search_@2x.png);
+            -moz-background-size:60px 30px; /*w & h of total ORIGINAL 72dpi image*/
              -ie-background-size:60px 30px;
               -o-background-size:60px 30px;
-       	 -webkit-background-size:60px 30px;
+         -webkit-background-size:60px 30px;
                  background-size:60px 30px;
 }
 
 #main_menu li.parent i {
-		background-image:url(../images/retina/menu_arrow_@2x.png);
-	    	-moz-background-size:20px 5px; /*w & h of total ORIGINAL 72dpi image*/
+        background-image:url(../images/retina/menu_arrow_@2x.png);
+            -moz-background-size:20px 5px; /*w & h of total ORIGINAL 72dpi image*/
              -ie-background-size:20px 5px;
               -o-background-size:20px 5px;
-       	 -webkit-background-size:20px 5px;
+         -webkit-background-size:20px 5px;
                  background-size:20px 5px;
 }
 
@@ -648,14 +648,14 @@ body.tall-logo nav.user {margin-left:0;}
 
 /*==================================================== 
 ******************************************************
-/*	MOBILE SPECIFIC RETINA SWAPPING
+/*  MOBILE SPECIFIC RETINA SWAPPING
 ******************************************************
 ====================================================== */
 
 @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2),
- 	only screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2),
- 	only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2),
-	only screen and (max-width: 767px) and (min-device-pixel-ratio: 2)
+    only screen and (max-width: 767px) and (-o-min-device-pixel-ratio: 3/2),
+    only screen and (max-width: 767px) and (min--moz-device-pixel-ratio: 2),
+    only screen and (max-width: 767px) and (min-device-pixel-ratio: 2)
 {
             
 .tall-logo #logo {
@@ -663,25 +663,23 @@ body.tall-logo nav.user {margin-left:0;}
             -moz-background-size:78px 85px; /*w & h of total image 72dpi image*/
              -ie-background-size:78px 85px;
               -o-background-size:78px 85px;
-       	 -webkit-background-size:78px 85px;
-                 background-size:78px 85px;	
+         -webkit-background-size:78px 85px;
+                 background-size:78px 85px; 
 
 }
 
 
 .mobile_nav a span
 {
-	background-image:url(../images/retina/navtriggerbg_@2x.png);
-	    	-moz-background-size:80px 40px; /*w & h of total sprite 72dpi image*/
+    background-image:url(../images/retina/navtriggerbg_@2x.png);
+            -moz-background-size:80px 40px; /*w & h of total sprite 72dpi image*/
              -ie-background-size:80px 40px;
               -o-background-size:80px 40px;
-       	 -webkit-background-size:80px 40px;
-                 background-size:80px 40px;	
+         -webkit-background-size:80px 40px;
+                 background-size:80px 40px; 
 
 }
 
 
 }/*end mobile specific retina swapping */
-
-
 
