@@ -312,8 +312,37 @@ with yours and get your fb:admis content information where the XXXX goes.
 					</p>
 				</li>
 			</ul>
-			<img src="oncreate.jpg" class="" alt="">
-			<p> </p>
+			<pre class="code language-html">
+				public void onCreate(Bundle savedInstanceState) 
+				{
+					// Load
+					super.onCreate(savedInstanceState);
+					setActionBarContentView(R.layout.fines_main);
+
+					// Get reference
+					activity = this;
+					
+					// Setup title bar
+					dropDownSetup();
+
+				    // Get layout elems.
+			        tv = (TextView) findViewById(R.id.message);
+			        
+				    // List
+			        lis = new ArrayList &lt; ListItem &gt;();
+			        ma = new MinrvaAdapter(this, lis);
+					lv = (ListView)findViewById(R.id.fines_list);
+			        lv.setAdapter(ma);
+
+			        // Create login form
+			        lf = new LoginForm(this, this, R.string.fines_acc_type, R.string.fines_auth);
+			        
+			        // Log user in
+			        lf.login();
+				}
+			</pre>
+
+			</br>
 			<ul>
 				<li>
 					<p>The first two lines will be the default code added by the new project.  They read the provided layout file (“fines_main.xml”), and translate that to what is seen on the screen.  
@@ -364,8 +393,60 @@ with yours and get your fb:admis content information where the XXXX goes.
 				After login() is called in onCreate(), onSuccessfulLogin() is called when the user enters in a valid username and password into the dialog box displayed by login(). That username and password combination is then sent to a subclass of AsyncTask: DownloadFines, which actually downloads and displays the user’s fines.
 			</p>
 			<h3>The DownloadFines Class</h3>
-			<img src="downloadFines.jpg" class="" alt="">
-			<img src="onpostexecute.jpg" class="" alt="">
+			<pre class="code language-html">
+				/**
+				 * AsyncTask used to download data from MinrvaServices api.
+				 */
+				private class DownloadFines extends AsyncTask &lt; String, Void, Fine[] &gt; 
+			    {    	
+					ProgressDialog progressDialog;
+				
+			        @Override
+			        protected void onPreExecute()
+			        {
+			        	// Clear current list before downloading more stuff
+			        	lis.clear();
+			    		ma.notifyDataSetChanged();
+
+			    		// Show a loading dialog
+			            progressDialog = ProgressDialog.show(activity, "", "Loading...");
+			        }
+			        
+			        @Override
+					protected Fine[] doInBackground(String... params) 
+			    	{ 
+			        	// Add username and password to post data
+						List &lt; NameValuePair &gt; nameValuePairs = new ArrayList &lt; NameValuePair &gt;();
+						nameValuePairs.add(new BasicNameValuePair("username", params[0]));
+			        	nameValuePairs.add(new BasicNameValuePair("password", params[1]));
+				    		
+						// Download data
+				        String uri = getString(R.string.fines_list);
+				        Fine[] fines = HTTP.downloadObjects(nameValuePairs, uri, Fine[].class);
+				        return fines;        
+			        }
+			        
+			        @Override
+					protected void onPostExecute(Fine[] fines) 
+				    {
+						if(fines.length == 0)
+						{
+							tv.setVisibility(View.VISIBLE);
+							lv.setVisibility(View.GONE);
+						}
+						else
+						{
+							tv.setVisibility(View.VISIBLE);
+							lv.setVisibility(View.VISIBLE);
+						}
+						
+						bindData(fines);
+			    		ma.notifyDataSetChanged();
+			            progressDialog.dismiss();   
+				    }
+			    }
+			</pre>    
+
 			<p>
 			</br>
 				Even though the class is started by creating an instance of it and calling execute(), the actual functionality is split into several functions.
@@ -388,7 +469,89 @@ with yours and get your fb:admis content information where the XXXX goes.
 				<li><strong>onPostExecute() </strong>- this method processes the received data and updates the UI of the Fines activity to display the received data</li>
 			</ul>
 		<h3> The bindData() method </h3>
-			<img src="binddata.jpg" class="" alt="">
+			<pre class="code language-html">
+				/**
+				 * Add data to array of data that is bound to list adapter. This function is responsible for layout design of list items.
+				 * 
+				 * @param fines
+				 * @return
+				 */
+				public void bindData(Fine[] fines)
+				{
+					double total = 0;
+					
+					for(int i = 0; i < fines.length; i++)
+					{  
+						// Get fine
+						Fine fine = fines[i];
+						 
+						// Get data from fine
+						String inst = fine.getInstitution();
+						String[] dates = fine.getDates();
+						String[] titles = fine.getTitles();
+						String[] types = fine.getTypes();
+						String[] amounts = fine.getAmounts();
+					
+						// Format data and add to list view
+						for(int j = 0; j < types.length; j++)
+						{
+							boolean zero = amounts[j].compareToIgnoreCase("") == 0;
+							
+							if(!zero)
+							{
+								// Calculate total
+								if(!amounts[j].equalsIgnoreCase(""))
+								{
+									try { total += Double.parseDouble(amounts[j]); }
+									catch(NumberFormatException e) {}
+								}
+								
+								// String
+								String txt = "";
+								txt += "&lt;b&gt;Type:&lt;/b&gt; " + types[j] + "&lt;br/&gt;";
+								txt += "&lt;b&gt;Date:&lt;/b&gt; " + dates[j] + "&lt;br/&gt;";
+								txt += "&lt;b&gt;Location:&lt;/b&gt; " + inst + "&lt;br/&gt;";
+								Spanned s = Html.fromHtml(txt);
+								String amt = "$" + amounts[j];
+								 
+								// Build List Item 1
+								ItemView ivTitle = new ItemView(titles[j], R.id.title);
+								ItemView ivInfo = new ItemView(s, R.id.info);
+								ItemView ivAmount = new ItemView(amt, R.id.amount);
+								
+								// List Item
+								ListItem li1 = new ListItem(null, R.layout.fines_li, false);
+								li1.add(ivTitle);
+								li1.add(ivInfo);
+								li1.add(ivAmount);
+								
+								// Build List Item 2
+								ListItem li2 = new ListItem(null, R.layout.fines_div, false);
+								
+								// Add List Items to list
+								lis.add(li1);
+								
+								if(i != fines.length - 1 || j != types.length - 1)
+									lis.add(li2);
+							}
+						}			 
+					}
+					
+					// Make total cost message
+					String txt = "You owe: ";
+					if(total > 0)
+					{
+				        DecimalFormat df = new DecimalFormat("#.00");
+						txt += "$" + df.format(total);
+					}
+					else
+						txt += "nothing!";
+						
+					// Display total cost message
+					tv.setText(txt);    
+				}
+			</pre>
+
 			<p>
 			</br>
 				This method examines the JSON object returned by the server and puts the data it found into a ListView that will display the fines information. At the end of the method, the total amount of the fines returned by the server is calculated and put into a TextView that is then displayed at the top of the Fines page.
@@ -468,8 +631,6 @@ with yours and get your fb:admis content information where the XXXX goes.
 				}	
 			</pre><!--close pre-->
 
-				(TODO: Finish instructions) </br>
-
 				Then copy this code for the DownloadHelloWorldCitation class into the HelloWorld class; it contains the code that handles the citation download: </br>
 
 			<pre class="code language-html">
@@ -523,29 +684,36 @@ with yours and get your fb:admis content information where the XXXX goes.
 			</pre>
 
 
-			<p>(TODO: Expand and step-ify) </br>
-				Integrating HelloWorld with the rest of the app </br>
+			<p>This completes the basic structure for our module. Now, it needs to be integrated into the rest of the app; it can’t be reached by the main components of the 	existing Minrva application until these steps are completed: </br>
+				
 				<ul>
-					<li> Open Springboard.java in package edu.illinois.ugl.minrva.core; add a statement to import the HelloWorld class (import edu.illinois.ugl.minrva.hello_world.HelloWorld)</li>
+					<li> Open Springboard.java in package edu.illinois.ugl.minrva.core; add a statement to import the HelloWorld class</li>
 						<ul>
-							<li>Add this line to the onCreate() method in SpringBoard.java:</li>
-							<ul>
-								<li> mFams.add(new Family("Hello World!", R.drawable.ic_launcher_owl, HelloWorld.class)); </li>
-							</ul>
-							<li>
-								place it next to the other mFam.add() statements in onCreate()
-							</li>
+							<li>import edu.illinois.ugl.minrva.hello_world.HelloWorld</li>
 						</ul>
-					<li> Add your new HelloWorld class to AndroidManifest.xml, in the res folder </li>
+					<li>Add this line to the onCreate() method in SpringBoard.java:</li>
+						<ul>
+							<li> mFams.add(new Family("Hello World!", R.drawable.ic_launcher_owl, HelloWorld.class)); </li>
+							<ul>
+								<li>
+									place it next to the other mFam.add() statements in onCreate()
+								</li>
+							</ul>
+						</ul>
+						
+					<li> Add your new HelloWorld class to AndroidManifest.xml, in the res folder, by adding this line to your AndroidManifest.xml file, next to the other activity elements </li>
 					<ul>
-						<li>Add this line to your AndroidManifest.xml file, next to the other activity elements</li>
 						<li>&lt;activity android:name=".hello_world.HelloWorld" android:configChanges="orientation|keyboardHidden"/&gt;</li>
 					</ul>
 					<li>
 						Create a file called hello_world.xml in the layout folder, and copy the contents of the hello_world.xml code listed below into it
 					</li>
+					<ul>
+						<li>This creates a layout for the module when it’s displayed; it’s based on the layout of the existing Fines module.</li>
+					</ul>
 				</ul>
 			</p>
+			
 			<h3 class="short_headline"><span><a name="finalCode">Final Code</a></span></h3>
 			<h4> HelloWorld.java </h4>
 
